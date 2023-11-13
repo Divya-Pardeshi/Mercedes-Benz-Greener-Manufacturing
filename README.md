@@ -1,19 +1,55 @@
-# Mercedes-Benz-Greener-Manufacturing
-Description
+# Mercedes-Benz Greener Manufacturing ---Simplilearn Project
 
-Reduce the time a Mercedes-Benz spends on the test bench.
+## Introduction
+Mercedes-Benz Greener Manufacturing is a project dedicated to optimizing the testing process for Mercedes-Benz cars, with the goal of reducing the time cars spend on the test bench. This initiative not only upholds Mercedes-Benz's high standards for safety and reliability but also contributes to lower carbon emissions.
 
-Problem Statement Scenario:
-Since the first automobile, the Benz Patent Motor Car in 1886, Mercedes-Benz has stood for important automotive innovations. These include the passenger safety cell with a crumple zone, the airbag, and intelligent assistance systems. Mercedes-Benz applies for nearly 2000 patents per year, making the brand the European leader among premium carmakers. Mercedes-Benz is the leader in the premium car industry. With a huge selection of features and options, customers can choose the customized Mercedes-Benz of their dreams.
+## Problem Statement
+The dataset provided contains various permutations of features in a Mercedes-Benz car. The project aims to predict the time it takes for a car to pass testing based on these features. The focus is on leveraging algorithmic approaches to optimize testing speed and enhance overall efficiency.
 
-To ensure the safety and reliability of every unique car configuration before they hit the road, the company’s engineers have developed a robust testing system. As one of the world’s biggest manufacturers of premium cars, safety and efficiency are paramount on Mercedes-Benz’s production lines. However, optimizing the speed of their testing system for many possible feature combinations is complex and time-consuming without a powerful algorithmic approach.
+## Actions Taken
 
-You are required to reduce the time that cars spend on the test bench. Others will work with a dataset representing different permutations of features in a Mercedes-Benz car to predict the time it takes to pass testing. Optimal algorithms will contribute to faster testing, resulting in lower carbon dioxide emissions without reducing Mercedes-Benz’s standards.
+### 1. Importing Necessary Libraries
+Libraries such as NumPy, Pandas, Seaborn, Matplotlib, and XGBoost were imported for data manipulation, visualization, and model building.
 
-Following actions should be performed:
+### 2. Loading and Exploring Data
+Train and test datasets were loaded into Pandas DataFrames (train_df and test_df). Basic exploratory data analysis was performed to understand the dataset.
 
-If for any column(s), the variance is equal to zero, then you need to remove those variable(s).
-Check for null and unique values for test and train sets.
-Apply label encoder.
-Perform dimensionality reduction.
-Predict your test_df values using XGBoost.
+### 3. Data Preprocessing
+Columns 'ID' and 'y' were removed from the training data, and numerical and categorical features were separated for further processing.
+
+### 4. Handling Zero Variance Features
+Columns with zero variance were identified and removed to enhance model efficiency.
+
+### 5. Label Encoding for Categorical Features
+Categorical features were label-encoded to convert them into a numerical format for model training.
+
+### 6. Concatenating Features
+Categorical and numerical features were concatenated to create the final dataset.
+
+### 7. Train-Test Split
+The dataset was split into training and testing sets.
+
+### 8. Model Building and Evaluation
+An XGBoost regression model was built using the training set. Model performance was evaluated using metrics such as RMSE and R-squared.
+
+### 9. Visualizing the Distribution of Actual and Predicted Values
+A distribution plot was created to visualize the actual and predicted values on the test set.
+
+### 10. Hyperparameter Tuning Using Grid Search
+Grid Search was performed to find the best hyperparameters for the XGBoost model.
+
+### 11. Predictions on Test Data
+The model was used to make predictions on the test set, and predictions were stored in a CSV file.
+
+### 12. K-fold Cross Validation with RandomizedSearchCV
+RandomizedSearchCV was employed to perform K-fold cross-validation and find optimal hyperparameters.
+
+### 13. Final Predictions on Test Data Using XGBoost
+The tuned XGBoost model was used to make final predictions on the test set, and predictions were stored in a CSV file.
+
+## Conclusion
+This project provides a comprehensive example of building, tuning, and evaluating an XGBoost regression model for predicting a continuous target variable in a tabular dataset. The use of various preprocessing techniques and hyperparameter tuning contributes to achieving optimal model performance.
+
+## Author
+**Divya Pardeshi**
+
